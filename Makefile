@@ -10,3 +10,7 @@ clean *.csv:
 	rm -f templr
 	ls *.txt | grep -v template.txt | xargs -I{} rm -f {}
 
+compress: *
+	rm templr.tar.gz
+	tar -czvf templr.tar.gz *
+
