@@ -4,10 +4,11 @@ CFLAGS = -Wall -Wextra -Werror -pedantic -O3 -std=c17 -g
 all: templr
 
 templr: templr.c
-	$(CC) $(CFLAGS) templr.c -o templr
+	mkdir -p bin
+	$(CC) $(CFLAGS) templr.c -o bin/templr
 
 clean *.csv:
-	rm -f templr
+	rm -f bin/templr
 	ls *.txt | grep -v template.txt | xargs -I{} rm -f {}
 
 compress: *

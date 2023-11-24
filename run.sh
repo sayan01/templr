@@ -12,4 +12,4 @@ if [[ ! -f "template.txt" ]]; then
     echo "template.txt not found"
     exit 1
 fi
-./templr template.txt students.csv
+bin/templr template.txt students.csv
