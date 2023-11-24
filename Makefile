@@ -8,5 +8,5 @@ templr: templr.c
 
 clean *.csv:
 	rm -f templr
-	cat *.csv | cut -d',' -f2 | xargs -I{} rm {}.txt
+	ls *.txt | grep -v template.txt | xargs -I{} rm -f {}
 
